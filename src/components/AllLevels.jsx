@@ -11,8 +11,10 @@ export default async function AllLevels() {
   const aggregate = level1 + level2 + level3 + level4;
 
   return (
-    <section id="admin-cards" className="admin-cards admin w-100 vh-100 d-flex flex-column justify-content-center align-items-center">
-      {/**
+    <section
+      id="admin-cards"
+      className="admin-cards admin w-100 vh-100 d-flex flex-column justify-content-center align-items-center"
+    >
       <div className="container">
         <div
           className=" title text-center"
@@ -25,14 +27,14 @@ export default async function AllLevels() {
         </div>
         <div className="  row d-flex justify-content-center align-items-center text-center">
           <div className="row g-lg-4 g-3">
-            <div className="col-6 col-lg-3 text-lg-start text-center ">
+            <div className="col-12 col-lg-3 text-lg-start text-center ">
               <div className="card p-3 icon-box" data-aos="fade-up">
                 <h3 className=" p-2">100 Level</h3>
                 <h4 className=" px-2">Total = {level1}</h4>
               </div>
             </div>
 
-            <div className="col-6 col-lg-3 text-lg-start text-center ">
+            <div className="col-12 col-lg-3 text-lg-start text-center ">
               <div
                 className="card p-3 icon-box"
                 data-aos="fade-up"
@@ -43,7 +45,7 @@ export default async function AllLevels() {
               </div>
             </div>
 
-            <div className="col-6 col-lg-3 text-lg-start text-center ">
+            <div className="col-12 col-lg-3 text-lg-start text-center ">
               <div
                 className="card p-3 icon-box"
                 data-aos="fade-up"
@@ -54,7 +56,7 @@ export default async function AllLevels() {
               </div>
             </div>
 
-            <div className="col-6 col-lg-3 text-lg-start text-center ">
+            <div className="col-12 col-lg-3 text-lg-start text-center ">
               <div
                 className="card p-3 icon-box"
                 data-aos="fade-up"
@@ -79,7 +81,7 @@ export default async function AllLevels() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }

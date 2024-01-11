@@ -261,7 +261,7 @@ i {
 
 .about .cnt ul {
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
 }
 
@@ -352,6 +352,19 @@ i {
   .about {
     text-align: center;
   }
+  
+  .about .row h1 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #52869d;
+    margin-bottom: 30px;
+  }
+  .about .cnt h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #67b0d1;
+    margin-bottom: 30px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -401,14 +414,14 @@ i {
   color: var(--white-color);
   font-weight: 700;
   margin-bottom: 15px;
-  font-size: 38px;
+  font-size: 35px;
   text-shadow: -1px 0 2px #2f4d5a;
 }
 .admin-cards .title p {
   color: var(--white-color);
   font-weight: 500;
   margin-bottom: 15px;
-  font-size: 28px;
+  font-size: 25px;
   text-shadow: -1px 0 2px #2f4d5a;
 }
 
@@ -416,7 +429,7 @@ i {
   color: var(--cardTextColor);
   font-weight: 700;
   margin-bottom: 15px;
-  font-size: 28px;
+  font-size: 25px;
 }
 .admin-cards h4 {
   color: var(--cardTextColor);
@@ -674,9 +687,7 @@ i {
   color: #fff;
   text-shadow: -1px 0 1px #2f4d5a;
 }
-.contact .card {
-  height: 70vh;
-}
+
 .contact .card {
   background-color: var(--bg-color);
   border-top-right-radius: 60px;
@@ -705,7 +716,7 @@ i {
   text-shadow: -1px 0 1px #2f4d5a;
 }
 .contact .card .card-body p {
-  color: var(--cardTextColor);
+  color: var(--softColor);
 }
 
 .contact .card label {
@@ -721,9 +732,7 @@ i {
 }
 
 @media (max-width: 768px) {
-  .contact .card {
-    height: 70vh;
-  }
+ 
   .contact .card .card-img {
     border-top-right-radius: 60px;
     border-bottom-left-radius: 4px;

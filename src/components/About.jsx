@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="about">
       <div className="container">
         <div className="row no-gutters">
-          <h1 className=" text-center">CSC Student Records</h1>
+          <h1 className=" text-center">Computer Science Student Counter</h1>
           <hr />
           <div
             className="cnt col-xl-5 d-flex align-items-stretch"
@@ -16,22 +16,21 @@ export default function About() {
               <h3>Purposes</h3>
               <ul>
                 <li>
-                  <i className="bi bi-chevron-double-right"></i> to be able to
-                  capture the total number of student in each level.
+                  <i className="bi bi-chevron-double-right"></i>
+                  to capture the total number of student in each level.
                 </li>
                 <li>
                   <i className="bi bi-chevron-double-right"></i>
-                  to be able to know the current 'active' student in section.
+                  to sum up and get the total records.
                 </li>
                 <li>
                   <i className="bi bi-chevron-double-right"></i>
-                  to be able to capture and store defer student.
+                  to be able to capture and store the record in a database.
                 </li>
 
                 <li>
                   <i className="bi bi-chevron-double-right"></i>
-                  to store any crime commited by the student, as well good
-                  conduct.
+                  to edit and delete the record if necessary.
                 </li>
               </ul>
             </div>
@@ -47,7 +46,7 @@ export default function About() {
                   <i className="bi bi-question-circle"></i>
                   <h4>Why choose us</h4>
                   <p>
-                    <Link className="btn rounded-2 border-info" href={"/"}>
+                    <Link className="btn rounded-2 border-info" href={""}>
                       Check it here
                     </Link>
                   </p>
@@ -73,7 +72,10 @@ export default function About() {
                   <i className="bi bi-clipboard-plus"></i>
                   <h4>Total Students </h4>
                   <p>
-                    <Link className="btn rounded-2 border-info" href={"#admin-cards"}>
+                    <Link
+                      className="btn rounded-2 border-info"
+                      href={"#admin-cards"}
+                    >
                       In all Department
                     </Link>
                   </p>
@@ -86,7 +88,10 @@ export default function About() {
                   <i className="bi bi-clipboard-plus"></i>
                   <h4>Total student </h4>
                   <p>
-                    <Link className="btn rounded-2 border-info" href={"#admin-cards"}>
+                    <Link
+                      className="btn rounded-2 border-info"
+                      href={"#admin-cards"}
+                    >
                       Each department
                     </Link>
                   </p>

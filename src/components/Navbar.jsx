@@ -42,6 +42,11 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a href="#about" className="nav-link fw-bold">
+                FAQs
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#about" className="nav-link fw-bold">
                 About
               </a>
             </li>

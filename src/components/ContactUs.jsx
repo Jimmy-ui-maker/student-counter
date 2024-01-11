@@ -16,12 +16,12 @@ export default function ContactUs() {
             <div className="col-12 col-lg-12 align-self-start order-1 order-lg-0">
               <div className="card">
                 <Link
-                  href="/kasu/one-k.jpg"
+                  href="/kasu/slt-one.jpg"
                   data-lightbox="about-image"
                   data-title=" Location"
                   className="glightbox mb-0"
                 >
-                  <img src="/kasu/slt-one.jpg" className="card-img" />
+                  <img src="/kasu/one-k.jpg" className="card-img" />
                 </Link>
                 <div className="card-body">
                   <h5 className="card-subtitle">Contact Address</h5>
