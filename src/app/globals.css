@@ -1,0 +1,788 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons";
+@import "lightbox2/dist/css/lightbox.min.css";
+@import "animate.css";
+
+:root {
+  --bg-color: #52869d;
+  --white-color: #fff;
+  --textColor: #dfd9ff;
+  --hoverColor: #dfd9ff;
+  --softColor: #f1fbff;
+  --cardHover: #67b0d1;
+  --cardTextColor: #67b0d1;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: var(--softColor);
+}
+
+/*--------------------------------------------------------------
+# Navbar Section
+--------------------------------------------------------------*/
+.navbar {
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: end;
+}
+
+.navbar li {
+  position: relative;
+}
+.navbar a:hover {
+  opacity: 0.6;
+}
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white-color);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: var(--softColor);
+  font-size: 17px;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+#General Admin Section Section
+--------------------------------------------------------------*/
+#gadmin {
+  background: var(--bg-color);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* up and down*/
+#gadmin .btn-get-started {
+  -webkit-animation: upDown 5s infinite;
+  animation: upDown 5s infinite;
+}
+
+@-webkit-keyframes upDown {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+hr {
+  color: #52869d;
+}
+
+#gadmin .card {
+  background-color: #52869d;
+  border-top-right-radius: 70px;
+  border-top-left-radius: 70px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#gadmin h3 {
+  margin: 0 0 10px 0;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fafafa;
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+#gadmin h5 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #eff2f8;
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+
+#gadmin a,
+i {
+  color: var(--white-color);
+}
+
+#gadmin .row .a-route a {
+  font-size: 20px;
+  display: inline-block;
+  padding: 12px 0;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  margin: 8px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border: 2px solid var(--white-color);
+}
+
+#gadmin a:hover {
+  color: #8ec4dd;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  #gadmin .row .a-route a {
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 0;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    margin: 8px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 2px solid #fff;
+  }
+}
+
+@media (min-width: 1024px) {
+  #gadmin {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #gadmin .card {
+    background-color: #52869d;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  #gadmin h3 {
+    font-size: 25px;
+    line-height: 30px;
+    text-shadow: -1px 0 2px #2f4d5a;
+  }
+  #gadmin h5 {
+    font-size: 15px;
+    line-height: 30px;
+    text-shadow: -1px 0 2px #2f4d5a;
+  }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about {
+  background: url("/img/about-bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 9;
+}
+
+.about .container {
+  position: relative;
+  z-index: 10;
+}
+
+.about .cnt {
+  padding: 30px 30px 30px 0;
+}
+.about .row h1 {
+  font-weight: 700;
+  font-size: 34px;
+  color: #52869d;
+  margin-bottom: 30px;
+}
+.about .cnt h3 {
+  font-weight: 700;
+  font-size: 34px;
+  color: #67b0d1;
+  margin-bottom: 30px;
+}
+
+.about .cnt ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about .cnt ul i {
+  padding-right: 2px;
+  color: #b5d9e9;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.about .cnt ul li {
+  color: #52869d;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.about .cnt ul li:first-child {
+  padding-top: 0;
+}
+
+.about .cnt ul a {
+  color: #52869d;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.about .cnt ul a:hover {
+  color: #a2cfe3;
+}
+
+.about .cnt .about-btn {
+  display: inline-block;
+  background: #67b0d1;
+  padding: 6px 44px 8px 30px;
+  color: #fff;
+  border-radius: 50px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.about .cnt .about-btn i {
+  font-size: 18px;
+  position: absolute;
+  right: 18px;
+  top: 9px;
+}
+
+.about .cnt .about-btn:hover {
+  background: #7bbad7;
+}
+
+.about .icon-boxes .icon-box {
+  margin-top: 30px;
+}
+
+.about .icon-boxes .icon-box i {
+  font-size: 40px;
+  color: #67b0d1;
+  margin-bottom: 10px;
+}
+
+.about .icon-boxes .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #67b0d1;
+}
+
+.about .icon-boxes .icon-box a {
+  font-size: 15px;
+  color: #52869d;
+}
+
+.about .icon-boxes .icon-box:hover a {
+  font-size: 15px;
+  color: #7bbad7;
+}
+
+@media (max-width: 1200px) {
+  .about .cnt {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------------------
+# All Levels Records
+--------------------------------------------------------------*/
+.admin-cards {
+  background: var(--cardHover);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.admin-cards .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.admin-cards .card {
+  height: 20vh;
+}
+
+.admin-cards .icon-box::before {
+  content: "";
+  position: absolute;
+  background: var(--white-color);
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+.admin-cards .title h2 {
+  color: var(--white-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 38px;
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+.admin-cards .title p {
+  color: var(--white-color);
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 28px;
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+
+.admin-cards h3 {
+  color: var(--cardTextColor);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+.admin-cards h4 {
+  color: var(--cardTextColor);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.admin-cards .icon-box:hover::before {
+  background: var(--cardHover);
+  top: 0;
+  border-radius: 0px;
+}
+
+.admin-cards .icon {
+  margin-bottom: 15px;
+}
+
+.admin-cards .icon i {
+  font-size: 48px;
+  line-height: 1;
+  color: var(--cardTextColor);
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-cards .icon-box:hover h3 {
+  color: var(--white-color);
+}
+.admin-cards .icon-box:hover h4 {
+  color: var(--white-color);
+}
+@media (max-width: 768px) {
+  .admin-cards .title h2 {
+    color: var(--white-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-shadow: -1px 0 2px #2f4d5a;
+  }
+  .admin-cards h3 {
+    color: #67b0d1;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+  .admin-cards h4 {
+    color: #67b0d1;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Total Record Card
+--------------------------------------------------------------*/
+.admin-cards .total {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.3s ease-in-out;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  z-index: 1;
+}
+
+.admin-cards .card {
+  height: 20vh;
+}
+
+.admin-cards .total::before {
+  content: "";
+  position: absolute;
+  background: var(--white-color);
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.admin-cards .total h1 {
+  color: var(--cardTextColor);
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.admin-cards .total:hover::before {
+  background: var(--cardHover);
+  top: 0;
+  border-radius: 0px;
+}
+
+.admin-cards .icon {
+  margin-bottom: 15px;
+}
+
+.admin-cards .total:hover h1 {
+  color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+  .admin-cards .total h1 {
+    color: var(--cardTextColor);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Form3 Section
+--------------------------------------------------------------*/
+#allForms {
+  background: var(--bg-color);
+}
+#allForms .card {
+  background: transparent;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.3s ease-in-out;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  z-index: 1;
+}
+
+#allForms .topic h2 {
+  color: var(--softColor);
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+#allForms .card h1 {
+  margin: 0 0 10px 0;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  text-shadow: -1px 0 1px #2f4d5a;
+}
+
+#allForms .card label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: -1px 0 1px #2f4d5a;
+}
+#allForms .card input {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  #allForms .route .c-up {
+    margin-bottom: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  #allForms .container {
+    margin-top: 40%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Modal Form Section
+--------------------------------------------------------------*/
+
+.c-modal {
+  background: var(--bg-color);
+}
+
+.c-modal .card {
+  background: transparent;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.3s ease-in-out;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  z-index: 1;
+}
+.c-modal .topic h2 {
+  color: var(--softColor);
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+.c-modal .card h1 {
+  margin: 0 0 10px 0;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  text-shadow: -1px 0 1px #2f4d5a;
+}
+
+.c-modal .card label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: -1px 0 1px #2f4d5a;
+}
+.c-modal .card input {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .c-modal .route .c-up {
+    margin-bottom: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  #allForms .container {
+    margin-top: 40%;
+  }
+}
+
+/*--------------------------------------------------------------
+# contact Section
+--------------------------------------------------------------*/
+
+.contact {
+  background-color: var(--bg-color);
+  background-size: cover;
+  position: relative;
+}
+
+.contact .heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: -1px 0 1px #2f4d5a;
+}
+.contact .card {
+  height: 70vh;
+}
+.contact .card {
+  background-color: var(--bg-color);
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.contact .card .card-img {
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 0px;
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.contact .card .card-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: -1px 0 1px #2f4d5a;
+}
+.contact .card .card-body p {
+  color: var(--cardTextColor);
+}
+
+.contact .card label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: -1px 0 1px #2f4d5a;
+}
+.contact .card input {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .contact .card {
+    height: 70vh;
+  }
+  .contact .card .card-img {
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 0px;
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
+  }
+}
+
+.contact .card-btn,
+.contact .btn-submit {
+  width: 100px;
+  height: 40px;
+  background-color: var(--cardHover);
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--white-color);
+}
+.contact .card-btn,
+.contact .btn-submit:hover {
+  background-color: var(--softColor);
+  color: #000;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #67b0d1;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+#footer .credits a {
+  color: #fff;
+}
+#footer .credits a:hover {
+  color: #67b0d1;
+}
+#footer:hover {
+  background: #52869d;
+}
+
+@media (max-width: 575px) {
+  #footer .footer-top .footer-info {
+    margin: -20px 0 30px 0;
+  }
+}
