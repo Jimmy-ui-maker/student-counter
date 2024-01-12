@@ -58,6 +58,7 @@ export default function ContactUs() {
                         type="text"
                         className="form-control shadow-sm bg-transparent"
                         id="name"
+                        readOnly
                       />
                     </div>
                     <div className="col-md-12">
@@ -68,6 +69,7 @@ export default function ContactUs() {
                         type="title"
                         className="form-control  shadow-sm bg-transparent"
                         id="email"
+                        readOnly
                       />
                     </div>
 
@@ -79,6 +81,7 @@ export default function ContactUs() {
                         className="form-control  shadow-sm bg-transparent"
                         id="enquiry"
                         rows="5"
+                        readOnly
                       ></textarea>
                     </div>
                     <div className="d-flex align-self-end justify-content-end text-end">

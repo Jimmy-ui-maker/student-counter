@@ -55,8 +55,8 @@ export default function page() {
       if (res.ok) {
         const form = e.target;
         form.reset();
-        router.refresh();
         router.push("/");
+        router.refresh();
       } else {
         console.log("User registration failed.");
       }
@@ -80,11 +80,7 @@ export default function page() {
                   className=" align-items-center p-2  rounded"
                 >
                   <h1 className=" text-center">400 Level Entry Page</h1>
-                  {error && (
-                    <p className=" text-center fw-bold">
-                      {error}
-                    </p>
-                  )}
+                  {error && <p className=" text-center fw-bold">{error}</p>}
                   <hr />
                   <div className="flex mb-4">
                     <div className="col-md-12">
