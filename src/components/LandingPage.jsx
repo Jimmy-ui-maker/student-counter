@@ -29,41 +29,33 @@ export default function LandingPage() {
             </div>
             <div className="row">
               <div className=" a-route col-lg-12 col-12 mt-4">
-                <a
-                  href=""
+                <Link
+                  href="/create1"
                   className="btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#form1"
                 >
                   1+
-                </a>
-                <a
-                  href=""
+                </Link>
+                <Link
+                  href="/create2"
                   className="btn scrollto"
-                  data-bs-toggle="modal"
-                  data-bs-target="#form2"
                 >
                   2+
-                </a>
-                <a href="#about" className="btn-get-started scrollto">
+                </Link>
+                <Link href="#about" className="btn-get-started scrollto">
                   <i className="bi bi-chevron-double-down"></i>
-                </a>
-                <a
-                  href=""
+                </Link>
+                <Link
+                  href="/create3"
                   className="btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#form3"
                 >
                   3+
-                </a>
-                <a
-                  href=""
+                </Link>
+                <Link
+                  href="/create4"
                   className="btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#form4"
                 >
                   4+
-                </a>
+                </Link>
               </div>
             </div>
           </div>

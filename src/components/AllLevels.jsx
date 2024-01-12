@@ -3,17 +3,17 @@ import Link from "next/link";
 import React from "react";
 
 export default async function AllLevels() {
-  const level1 = await LevelOne.find().countDocuments();
-  const level2 = await LevelTwo.find().countDocuments();
-  const level3 = await LevelThree.find().countDocuments();
-  const level4 = await LevelFour.find().countDocuments();
+  //const level1 = await LevelOne.find().countDocuments();
+  //const level2 = await LevelTwo.find().countDocuments();
+  //const level3 = await LevelThree.find().countDocuments();
+  //const level4 = await LevelFour.find().countDocuments();
 
   const aggregate = level1 + level2 + level3 + level4;
 
   return (
     <section
       id="admin-cards"
-      className="admin-cards admin w-100 vh-100 d-flex flex-column justify-content-center align-items-center"
+      className="admin-cards admin d-flex flex-column justify-content-center align-items-center"
     >
       <div className="container">
         <div

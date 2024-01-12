@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Navbar() {
@@ -15,9 +16,9 @@ export default function Navbar() {
           height={30}
           alt=""
         />
-        <a href="/" className="navbar-brand fw-bolder text-uppercase">
+        <Link href="/" className="navbar-brand fw-bolder text-uppercase">
         Student's Counter
-        </a>
+        </Link>
         <button
           className="navbar-toggler shadow-none  border-0"
           type="button"

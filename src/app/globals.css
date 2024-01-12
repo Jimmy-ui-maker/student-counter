@@ -579,12 +579,20 @@ i {
   margin: 0 0 10px 0;
   font-size: 34px;
   font-weight: 700;
-  line-height: 50px;
   text-transform: uppercase;
   color: var(--white-color);
   text-shadow: -1px 0 1px #2f4d5a;
 }
 
+#allForms .card p {
+  margin: 0 0 10px 0;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: var(--cardHover);
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: rgba(255, 0, 0, 0.541);
+}
 #allForms .card label {
   font-size: 18px;
   font-weight: 700;
@@ -595,6 +603,20 @@ i {
   font-size: 18px;
   font-weight: 700;
   color: #000;
+}
+
+
+#allForms .btn-submit {
+  width: 120px;
+  height: 40px;
+  background-color: var(--cardHover);
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--white-color);
+}
+#allForms .btn-submit:hover {
+  background-color: var(--softColor);
+  color: var(--cardHover);
 }
 
 @media (max-width: 768px) {
@@ -657,6 +679,19 @@ i {
   font-size: 18px;
   font-weight: 700;
   color: #000;
+}
+
+.c-modal .btn-submit {
+  width: 120px;
+  height: 40px;
+  background-color: var(--cardHover);
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--white-color);
+}
+.c-modal .btn-submit:hover {
+  background-color: var(--softColor);
+  color: var(--cardHover);
 }
 
 @media (max-width: 768px) {

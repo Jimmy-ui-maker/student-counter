@@ -3,7 +3,7 @@ export default function ContactUs() {
   return (
     <>
       <section
-        className="contact w-100 vh-100 d-flex flex-column justify-content-center align-items-center shadow-sm"
+        className="contact w-100 flex-column justify-content-center align-items-center shadow-sm"
         id="contact"
       >
         <div className="container contact">
@@ -13,7 +13,7 @@ export default function ContactUs() {
           </div>
 
           <div className="row g-4 justify-content-center align-items-center ">
-            <div className="col-12 col-lg-12 align-self-start order-1 order-lg-0">
+            <div className="col-12 col-lg-6 align-self-start order-1 order-lg-0">
               <div className="card">
                 <Link
                   href="/kasu/slt-one.jpg"
@@ -44,7 +44,6 @@ export default function ContactUs() {
                 </div>
               </div>
             </div>
-            {/**
             <div className="col-12 col-lg-6 align-self-start order-0 order-lg-1">
               <div className="card ">
                 <div className="card-body">
@@ -67,7 +66,7 @@ export default function ContactUs() {
                       </label>
                       <input
                         type="title"
-                        className="form-control  shadow-sm"
+                        className="form-control  shadow-sm bg-transparent"
                         id="email"
                       />
                     </div>
@@ -77,7 +76,7 @@ export default function ContactUs() {
                         Enquiry
                       </label>
                       <textarea
-                        className="form-control  shadow-sm"
+                        className="form-control  shadow-sm bg-transparent"
                         id="enquiry"
                         rows="5"
                       ></textarea>
@@ -93,7 +92,7 @@ export default function ContactUs() {
                   </form>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

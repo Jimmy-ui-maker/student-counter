@@ -1,6 +1,3 @@
-import React from "react";
-import Input from "../Input";
-
 export default function Form1() {
   return (
     <>
@@ -30,51 +27,7 @@ export default function Form1() {
               <div className="row justify-content-center align-items-center">
                 <div className="card  mt-3">
                   <div className="card-body">
-                    <form className=" align-items-center p-2  rounded">
-                      <h1 className=" text-center">100 Level Entry Page</h1>
-                      <hr />
-                      <div className="flex mb-4">
-                        <div className="col-md-12">
-                          <label className="">Fullames</label>
-                          <Input
-                            type="text"
-                            placeholder="Fullnames"
-                            name="fullnames"
-                          />
-                        </div>
-                        <div className="col-md-12">
-                          <label className="">Matric</label>
-                          <Input
-                            type="text"
-                            placeholder="Matric"
-                            name="matric"
-                          />
-                        </div>
-                      </div>
-                      <div className="flex mb-4">
-                        <div className="col-md-12">
-                          <label className="">Level</label>
-                          <Input type="text" placeholder="level" name="level" />
-                        </div>
-                        <div className="col-md-12">
-                          <label className="">Phone</label>
-                          <Input
-                            type="number"
-                            placeholder="Contact Number"
-                            name="phone"
-                          />
-                        </div>
-                        <div className="col-md-12">
-                          <label className="">Desctiption</label>
-                          <Input type="text" placeholder="desc" name="desc" />
-                        </div>
-                      </div>
-                      <div className=" d-flex justify-content-center">
-                        <button className="btn btn-outline-info" type="submit">
-                          Create User
-                        </button>
-                      </div>
-                    </form>
+                    <h1 className=" text-white fw-bold">Under development</h1>
                   </div>
                 </div>
               </div>

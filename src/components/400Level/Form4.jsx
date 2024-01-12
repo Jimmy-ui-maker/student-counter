@@ -1,5 +1,4 @@
 import { addLevelFour } from "@/app/serverAcions/Server4";
-import Input from "../Input";
 
 export default function Form4() {
   return (
@@ -39,7 +38,8 @@ export default function Form4() {
                       <div className="flex mb-4">
                         <div className="col-md-12">
                           <label className="">Fullames</label>
-                          <Input
+                          <input
+                            className="rounded-2 border-info form-control shadow-none"
                             type="text"
                             placeholder="Fullnames"
                             name="fullnames"
@@ -47,7 +47,8 @@ export default function Form4() {
                         </div>
                         <div className="col-md-12">
                           <label className="">Matric</label>
-                          <Input
+                          <input
+                            className="rounded-2 border-info form-control shadow-none"
                             type="text"
                             placeholder="Matric"
                             name="matric"
@@ -57,11 +58,17 @@ export default function Form4() {
                       <div className="flex mb-4">
                         <div className="col-md-12">
                           <label className="">Level</label>
-                          <Input type="text" placeholder="level" name="level" />
+                          <input
+                            className="rounded-2 border-info form-control shadow-none"
+                            type="text"
+                            placeholder="level"
+                            name="level"
+                          />
                         </div>
                         <div className="col-md-12">
                           <label className="">Phone</label>
-                          <Input
+                          <input
+                            className="rounded-2 border-info form-control shadow-none"
                             type="number"
                             placeholder="Contact Number"
                             name="phone"
@@ -69,7 +76,12 @@ export default function Form4() {
                         </div>
                         <div className="col-md-12">
                           <label className="">Desctiption</label>
-                          <Input type="text" placeholder="desc" name="desc" />
+                          <input
+                            className="rounded-2 border-info form-control shadow-none"
+                            type="text"
+                            placeholder="desc"
+                            name="desc"
+                          />
                         </div>
                       </div>
                       <div className=" d-flex justify-content-center">

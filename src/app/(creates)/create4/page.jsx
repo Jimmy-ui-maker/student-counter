@@ -23,7 +23,7 @@ export default function page() {
     }
 
     try {
-      const resUserExists = await fetch("api/exist1", {
+      const resUserExists = await fetch("api/exist4", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export default function page() {
         return;
       }
 
-      const res = await fetch("api/level1", {
+      const res = await fetch("api/level4", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ export default function page() {
                   onSubmit={handleSubmit}
                   className=" align-items-center p-2  rounded"
                 >
-                  <h1 className=" text-center">100 Level Entry Page</h1>
+                  <h1 className=" text-center">400 Level Entry Page</h1>
                   {error && (
                     <p className=" text-center fw-bold">
                       {error}

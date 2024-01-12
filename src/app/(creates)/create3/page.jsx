@@ -23,7 +23,7 @@ export default function page() {
     }
 
     try {
-      const resUserExists = await fetch("api/exist1", {
+      const resUserExists = await fetch("api/exist3", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export default function page() {
         return;
       }
 
-      const res = await fetch("api/level1", {
+      const res = await fetch("api/level3", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,6 +70,7 @@ export default function page() {
       <div className="container">
         <div class="topic text-center">
           <h2>Welcome Back</h2>
+          <hr className=" bg-white " />
         </div>
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-lg-6 align-self-start ">
@@ -79,13 +80,8 @@ export default function page() {
                   onSubmit={handleSubmit}
                   className=" align-items-center p-2  rounded"
                 >
-                  <h1 className=" text-center">100 Level Entry Page</h1>
-                  {error && (
-                    <p className=" text-center fw-bold">
-                      {error}
-                    </p>
-                  )}
-                  <hr />
+                  <h1 className=" text-center">300 Level Entry Page</h1>
+                  {error && <p className=" text-center fw-bold">{error}</p>}
                   <div className="flex mb-4">
                     <div className="col-md-12">
                       <label className="">Fullames</label>
