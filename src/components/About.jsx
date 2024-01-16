@@ -46,7 +46,7 @@ export default function About() {
                   <i className="bi bi-question-circle"></i>
                   <h4>Why choose us</h4>
                   <p>
-                    <Link className="btn rounded-2 border-info" href={""}>
+                    <Link className="btn rounded-2 border-info" href={"/"}>
                       Check it here
                     </Link>
                   </p>
@@ -59,7 +59,7 @@ export default function About() {
                   <i className="bi bi-question-circle"></i>
                   <h4>FAQs</h4>
                   <p>
-                    <Link className="btn rounded-2 border-info" href={""}>
+                    <Link className="btn rounded-2 border-info" href={"/"}>
                       Check it here
                     </Link>
                   </p>
