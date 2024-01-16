@@ -425,6 +425,7 @@ i {
   text-shadow: -1px 0 2px #2f4d5a;
 }
 
+
 .admin-cards h3 {
   color: var(--cardTextColor);
   font-weight: 700;
@@ -455,12 +456,34 @@ i {
   transition: all 0.3s ease-in-out;
 }
 
+.admin-cards .card .s-view {
+  font-size: 10px;
+  width: 30px;
+  height: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid var(--cardTextColor);
+  margin-top: -110px;
+}
+
+.admin-cards .card .s-view i{
+  font-size: 18px;
+  line-height: 1;
+  color: var(--cardTextColor);
+  transition: all 0.3s ease-in-out;
+}
+
 .admin-cards .icon-box:hover h3 {
   color: var(--white-color);
 }
 .admin-cards .icon-box:hover h4 {
   color: var(--white-color);
 }
+
+.admin-cards .card:hover i {
+  color: var(--white-color);
+}
+
 @media (max-width: 768px) {
   .admin-cards .title h2 {
     color: var(--white-color);
@@ -673,30 +696,19 @@ i {
   text-shadow: -1px 0 1px #2f4d5a;
 }
 
-.c-modal .card label {
+.c-modal .card p {
   font-size: 18px;
   font-weight: 700;
   color: #fff;
   text-shadow: -1px 0 1px #2f4d5a;
 }
-.c-modal .card input {
-  font-size: 18px;
-  font-weight: 700;
-  color: #000;
+
+@media (max-width: 768px) {
+  .c-modal .topic h2 {
+    font-size: 15px;
+  }
 }
 
-.c-modal .btn-submit {
-  width: 120px;
-  height: 40px;
-  background-color: var(--cardHover);
-  border-radius: 5px;
-  font-size: 18px;
-  color: var(--white-color);
-}
-.c-modal .btn-submit:hover {
-  background-color: var(--softColor);
-  color: var(--cardHover);
-}
 
 
 

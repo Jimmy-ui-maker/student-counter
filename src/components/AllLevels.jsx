@@ -38,6 +38,14 @@ export default async function AllLevels() {
                   <h3 className=" p-2">100 Level</h3>
                   <h4 className=" px-2">Total = {level1}</h4>
                 </Link>
+                <Link
+                  className=" s-view "
+                  href={""}
+                  data-bs-toggle="modal"
+                  data-bs-target="#record1"
+                >
+                  <i className="bi bi-arrow-repeat "></i>
+                </Link>
               </div>
             </div>
 
@@ -53,6 +61,14 @@ export default async function AllLevels() {
                 >
                   <h3 className=" p-2">200 Level</h3>
                   <h4 className=" px-2">Total = {level2}</h4>
+                </Link>
+                <Link
+                  className=" s-view "
+                  href={""}
+                  data-bs-toggle="modal"
+                  data-bs-target="#record"
+                >
+                  <i className="bi bi-arrow-repeat "></i>
                 </Link>
               </div>
             </div>
@@ -70,6 +86,14 @@ export default async function AllLevels() {
                   <h3 className=" p-2">300 Level</h3>
                   <h4 className=" px-2">Total = {level3}</h4>
                 </Link>
+                <Link
+                  className=" s-view "
+                  href={""}
+                  data-bs-toggle="modal"
+                  data-bs-target="#record3"
+                >
+                  <i className="bi bi-arrow-repeat "></i>
+                </Link>
               </div>
             </div>
 
@@ -85,6 +109,14 @@ export default async function AllLevels() {
                 >
                   <h3 className=" p-2">400 Level</h3>
                   <h4 className=" px-2">Total = {level4}</h4>
+                </Link>
+                <Link
+                  className=" s-view "
+                  href={""}
+                  data-bs-toggle="modal"
+                  data-bs-target="#record4"
+                >
+                  <i className="bi bi-arrow-repeat "></i>
                 </Link>
               </div>
             </div>

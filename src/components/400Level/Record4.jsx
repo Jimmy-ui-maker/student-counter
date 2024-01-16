@@ -1,9 +1,14 @@
-export default function Form1() {
+import { LevelFour } from "@/models/Tables";
+
+export default async function Record4() {
+  const level4 = await LevelFour.find({}, null, {
+    sort: { _id: -1 },
+  });
   return (
     <>
       <div
         class="modal fade"
-        id="form1"
+        id="record4"
         tabindex="-1"
         aria-labelledby="modal-title"
         aria-hidden="true"
@@ -13,7 +18,7 @@ export default function Form1() {
             {/** Header */}
             <div class="modal-header">
               <div class="topic text-center">
-                <h2>Welcome Back</h2>
+                <h2>400 Level Reords.</h2>
               </div>
               <button
                 type="button"
@@ -26,9 +31,11 @@ export default function Form1() {
             <div class="modal-body">
               <div className="row justify-content-center align-items-center">
                 <div className="card  mt-3">
-                  <div className="card-body">
-                    <h1 className=" text-white fw-bold">Under development</h1>
-                  </div>
+                  {level4.map((l4) => (
+                    <div className="card-body">
+                      <p>{l4.matric}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
