@@ -6,7 +6,6 @@ export default function Navbar() {
     <nav
       className="navbar navbar-expand-md shadow-sm py-1"
       data-aos="fade-down"
-      data-aos-delay="5000"
     >
       <div className="container">
         <img

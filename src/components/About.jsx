@@ -17,20 +17,20 @@ export default function About() {
               <ul>
                 <li>
                   <i className="bi bi-chevron-double-right"></i>
-                  to capture the total number of student in each level.
+                  To capture the total number of student in each level.
                 </li>
                 <li>
                   <i className="bi bi-chevron-double-right"></i>
-                  to sum up and get the total records.
+                  To sum up and get the total records.
                 </li>
                 <li>
                   <i className="bi bi-chevron-double-right"></i>
-                  to be able to capture and store the record in a database.
+                  To be able to capture and store the record in a database.
                 </li>
 
                 <li>
                   <i className="bi bi-chevron-double-right"></i>
-                  to edit and delete the record if necessary.
+                  To edit and delete the record if necessary.
                 </li>
               </ul>
             </div>
