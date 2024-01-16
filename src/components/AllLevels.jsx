@@ -10,6 +10,8 @@ export default async function AllLevels() {
 
   const aggregate = level1 + level2 + level3 + level4;
 
+  const localhosturl = process.env.NEXTAUTH_URL;
+
   return (
     <section
       id="admin-cards"
@@ -29,8 +31,13 @@ export default async function AllLevels() {
           <div className="row g-lg-4 g-3">
             <div className="col-12 col-lg-3 text-lg-start text-center ">
               <div className="card p-3 icon-box" data-aos="fade-up">
-                <h3 className=" p-2">100 Level</h3>
-                <h4 className=" px-2">Total = {level1}</h4>
+                <Link
+                  className=" text-decoration-none"
+                  href={`${localhosturl}/api/level1`}
+                >
+                  <h3 className=" p-2">100 Level</h3>
+                  <h4 className=" px-2">Total = {level1}</h4>
+                </Link>
               </div>
             </div>
 
@@ -40,8 +47,13 @@ export default async function AllLevels() {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <h3 className=" p-2">200 Level</h3>
-                <h4 className=" px-2">Total = {level2}</h4>
+                <Link
+                  className=" text-decoration-none"
+                  href={`${localhosturl}/api/level2`}
+                >
+                  <h3 className=" p-2">200 Level</h3>
+                  <h4 className=" px-2">Total = {level2}</h4>
+                </Link>
               </div>
             </div>
 
@@ -51,8 +63,13 @@ export default async function AllLevels() {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h3 className=" p-2">300 Level</h3>
-                <h4 className=" px-2">Total = {level3}</h4>
+                <Link
+                  className=" text-decoration-none"
+                  href={`${localhosturl}/api/level3`}
+                >
+                  <h3 className=" p-2">300 Level</h3>
+                  <h4 className=" px-2">Total = {level3}</h4>
+                </Link>
               </div>
             </div>
 
@@ -62,8 +79,13 @@ export default async function AllLevels() {
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                <h3 className=" p-2">400 Level</h3>
-                <h4 className=" px-2">Total = {level4}</h4>
+                <Link
+                  className=" text-decoration-none"
+                  href={`${localhosturl}/api/level4`}
+                >
+                  <h3 className=" p-2">400 Level</h3>
+                  <h4 className=" px-2">Total = {level4}</h4>
+                </Link>
               </div>
             </div>
           </div>

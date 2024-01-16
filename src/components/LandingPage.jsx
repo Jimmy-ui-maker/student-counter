@@ -23,37 +23,27 @@ export default function LandingPage() {
               <div className="card g-4 border-white">
                 <div className="card-body ">
                   <h3 className=" my-2">Student's Counter</h3>
-                  <h5 className=" my-2 ">Computer Science Department, KASU.</h5>
+                  <h5 className=" my-2 ">
+                    Computer Science Department,KASU.
+                  </h5>
                 </div>
               </div>
             </div>
             <div className="row">
               <div className=" a-route col-lg-12 col-12 mt-4">
-                <Link
-                  href="/create1"
-                  className="btn"
-                >
+                <Link href="/create1" className="btn">
                   1+
                 </Link>
-                <Link
-                  href="/create2"
-                  className="btn scrollto"
-                >
+                <Link href="/create2" className="btn scrollto">
                   2+
                 </Link>
                 <Link href="#about" className="btn-get-started scrollto">
                   <i className="bi bi-chevron-double-down"></i>
                 </Link>
-                <Link
-                  href="/create3"
-                  className="btn"
-                >
+                <Link href="/create3" className="btn">
                   3+
                 </Link>
-                <Link
-                  href="/create4"
-                  className="btn"
-                >
+                <Link href="/create4" className="btn">
                   4+
                 </Link>
               </div>

@@ -13,3 +13,12 @@ export async function POST(req) {
     );
   }
 }
+
+export async function GET(req) {
+  try {
+    const get4 = await LevelFour.find();
+    return NextResponse.json(get4);
+  } catch (error) {
+    return NextResponse.json('Result not found')
+  }
+}
