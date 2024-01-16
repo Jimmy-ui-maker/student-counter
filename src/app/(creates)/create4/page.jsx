@@ -22,46 +22,51 @@ export default function page() {
       return;
     }
 
-    try {
-      const resUserExists = await fetch("api/exist4", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ matric }),
-      });
+    if (matric.startsWith("kasu/")) {
+      try {
+        const resUserExists = await fetch("api/exist4", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ matric }),
+        });
 
-      const { user } = await resUserExists.json();
+        const { user } = await resUserExists.json();
 
-      if (user) {
-        setError("User already exists.");
-        return;
+        if (user) {
+          setError("User already exists.");
+          return;
+        }
+
+        const res = await fetch("api/level4", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullnames,
+            matric,
+            level,
+            phone,
+            desc,
+          }),
+        });
+
+        if (res.ok) {
+          const form = e.target;
+          form.reset();
+          router.push("/");
+          router.refresh();
+        } else {
+          console.log("User registration failed.");
+        }
+      } catch (error) {
+        console.log("Error during registration: ", error);
       }
-
-      const res = await fetch("api/level4", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullnames,
-          matric,
-          level,
-          phone,
-          desc,
-        }),
-      });
-
-      if (res.ok) {
-        const form = e.target;
-        form.reset();
-        router.push("/");
-        router.refresh();
-      } else {
-        console.log("User registration failed.");
-      }
-    } catch (error) {
-      console.log("Error during registration: ", error);
+    } else {
+      setError("User not from KASU");
+      return;
     }
   };
 
@@ -84,7 +89,7 @@ export default function page() {
                   <hr />
                   <div className="flex mb-4">
                     <div className="col-md-12">
-                      <label className="">Fullames</label>
+                      <label className="">Fullnames</label>
                       <input
                         className="rounded-2 border-info form-control shadow-none"
                         type="text"

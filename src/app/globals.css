@@ -825,6 +825,13 @@ i {
   background: #52869d;
 }
 
+#footer .scroll-back{
+  background: var(--softColor);
+  border-radius: 50px;
+}
+#footer .scroll-back i{
+  font-size: 25px;
+}
 @media (max-width: 575px) {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;

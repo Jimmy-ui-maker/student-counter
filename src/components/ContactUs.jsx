@@ -38,7 +38,7 @@ export default function ContactUs() {
                   <p className="ms-4">+234 701 022 8016</p>
                   <h5 className="card-subtitle mb-2">
                     <i className="bi bi-clock-fill text-white me-2 border-0"></i>
-                    Times
+                    Time
                   </h5>
                   <p className="ms-4">24 Hour's</p>
                 </div>
