@@ -628,6 +628,10 @@ i {
     font-size: 15px;
     color: var(--white-color);
   }
+  #allForms .card h1 {
+    font-size: 24px;
+    
+  }
   #allForms .route .c-up {
     margin-bottom: 35%;
   }
