@@ -21,7 +21,7 @@ export default function page() {
       setError("All fields are necessary.");
       return;
     }
-    if(matric.startsWith('kasu/')){
+    if (matric.includes("KASU") && matric.includes("CSC")) {
       try {
         const resUserExists = await fetch("api/exist1", {
           method: "POST",
@@ -30,14 +30,14 @@ export default function page() {
           },
           body: JSON.stringify({ matric }),
         });
-  
+
         const { user } = await resUserExists.json();
-  
+
         if (user) {
           setError("User already exists.");
           return;
         }
-  
+
         const res = await fetch("api/level1", {
           method: "POST",
           headers: {
@@ -51,7 +51,7 @@ export default function page() {
             desc,
           }),
         });
-  
+
         if (res.ok) {
           const form = e.target;
           form.reset();
@@ -63,14 +63,10 @@ export default function page() {
       } catch (error) {
         console.log("Error during registration: ", error);
       }
-
-    }
-    else{
-      setError("User not from KASU.");
+    } else {
+      setError("User not from KASU(CSC) or matric must be Upercase.");
       return;
     }
-
-    
   };
 
   return (
@@ -88,7 +84,7 @@ export default function page() {
                   className=" align-items-center p-2  rounded"
                 >
                   <h1 className=" text-center">100 Level Entry Page</h1>
-                  {error && <p className=" text-center fw-bold">{error}</p>}
+
                   <hr />
                   <div className="flex mb-4">
                     <div className="col-md-12">
@@ -139,6 +135,7 @@ export default function page() {
                       />
                     </div>
                   </div>
+                  {error && <p className=" text-center fw-bold">{error}</p>}
                   <div className=" d-flex justify-content-center">
                     <button
                       className="btn btn-submit fw-semibold"

@@ -22,7 +22,7 @@ export default function page() {
       return;
     }
 
-    if (matric.startsWith("kasu/")) {
+    if (matric.includes("KASU") && matric.includes("CSC")) {
       try {
         const resUserExists = await fetch("api/exist4", {
           method: "POST",
@@ -65,7 +65,7 @@ export default function page() {
         console.log("Error during registration: ", error);
       }
     } else {
-      setError("User not from KASU");
+      setError("User not from KASU(CSC) or matric must be Upercase.");
       return;
     }
   };
@@ -85,7 +85,7 @@ export default function page() {
                   className=" align-items-center p-2  rounded"
                 >
                   <h1 className=" text-center">400 Level Entry Page</h1>
-                  {error && <p className=" text-center fw-bold">{error}</p>}
+
                   <hr />
                   <div className="flex mb-4">
                     <div className="col-md-12">
@@ -136,6 +136,7 @@ export default function page() {
                       />
                     </div>
                   </div>
+                  {error && <p className=" text-center fw-bold">{error}</p>}
                   <div className=" d-flex justify-content-center">
                     <button
                       className="btn btn-submit fw-semibold"
