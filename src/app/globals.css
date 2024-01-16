@@ -620,6 +620,14 @@ i {
 }
 
 @media (max-width: 768px) {
+  #allForms .btn-submit {
+    width: 120px;
+    height: 40px;
+    background-color: var(--cardHover);
+    border-radius: 5px;
+    font-size: 15px;
+    color: var(--white-color);
+  }
   #allForms .route .c-up {
     margin-bottom: 35%;
   }
