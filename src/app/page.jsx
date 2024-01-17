@@ -8,6 +8,7 @@ import ContactUs from "@/components/ContactUs";
 import FAQs from "@/components/FAQS";
 import LandingPage from "@/components/LandingPage";
 import About from "@/components/About";
+import Matrics from "@/components/Matrics";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <LandingPage />
       <Combine />
       <About />
+      <Matrics />
       <AllLevels />
       <Form1 />
       <Form2 />
