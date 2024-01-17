@@ -19,7 +19,7 @@ export default async function Matrics() {
   });
   return (
     <section
-      id="admin-cards"
+      id="matric-cards"
       className="admin-cards admin d-flex flex-column justify-content-center align-items-center"
     >
       <div className="container">
