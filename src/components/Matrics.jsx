@@ -62,7 +62,7 @@ export default async function Matrics() {
             </div>
 
             <div className="col-12 col-lg-3 text-lg-start text-center ">
-              {level2.map((l3) => (
+              {level3.map((l3) => (
                 <div
                   key={l3._id}
                   className="card p-3 icon-box"
@@ -76,7 +76,7 @@ export default async function Matrics() {
             </div>
 
             <div className="col-12 col-lg-3 text-lg-start text-center ">
-              {level2.map((l4) => (
+              {level4.map((l4) => (
                 <div
                   key={l4._id}
                   className="card p-3 icon-box"
