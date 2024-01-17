@@ -3,19 +3,19 @@ import { LevelFour, LevelOne, LevelThree, LevelTwo } from "@/models/Tables";
 export default async function Matrics() {
   const level1 = await LevelOne.find({}, null, {
     sort: { _id: -1 },
-    limit: 1,
+    limit:1,
   });
   const level2 = await LevelTwo.find({}, null, {
     sort: { _id: -1 },
-    limit: 1,
+    limit:1,
   });
   const level3 = await LevelThree.find({}, null, {
     sort: { _id: -1 },
-    limit: 1,
+    limit:1,
   });
   const level4 = await LevelFour.find({}, null, {
     sort: { _id: -1 },
-    limit: 1,
+    limit:1,
   });
   return (
     <section
