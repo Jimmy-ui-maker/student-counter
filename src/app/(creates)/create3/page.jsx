@@ -21,6 +21,10 @@ export default function page() {
       setError("All fields are necessary.");
       return;
     }
+    if (level != "300") {
+      setError("User not from 300 Level.");
+      return;
+    }
 
     if (matric.includes("KASU") && matric.includes("CSC")) {
       try {
@@ -131,7 +135,7 @@ export default function page() {
                       <input
                         className="rounded-2 border-info form-control shadow-none"
                         type="text"
-                        placeholder="desc"
+                        placeholder="description"
                         onChange={(e) => setDesc(e.target.value)}
                       />
                     </div>

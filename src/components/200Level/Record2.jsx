@@ -19,7 +19,7 @@ export default async function Record2() {
             {/** Header */}
             <div class="modal-header">
               <div class="topic text-center">
-                <h2>200 Level Records.</h2>
+                <h2>Level 2 Matric.</h2>
               </div>
               <button
                 type="button"

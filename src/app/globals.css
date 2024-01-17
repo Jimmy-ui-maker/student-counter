@@ -218,16 +218,16 @@ i {
 }
 
 /*--------------------------------------------------------------
-# About
+# Combine
 --------------------------------------------------------------*/
-.about {
+.combine {
   background: url("/img/about-bg.jpg") center center no-repeat;
   background-size: cover;
   padding: 60px 0;
   position: relative;
 }
 
-.about::before {
+.combine::before {
   content: "";
   position: absolute;
   left: 0;
@@ -238,128 +238,109 @@ i {
   z-index: 9;
 }
 
-.about .container {
+.combine .container {
   position: relative;
   z-index: 10;
 }
 
-.about .cnt {
+.combine .cnt {
   padding: 30px 30px 30px 0;
 }
-.about .row h1 {
+.combine .row h1 {
   font-weight: 700;
   font-size: 34px;
   color: #52869d;
   margin-bottom: 30px;
 }
-.about .cnt h3 {
+.combine .cnt h3 {
   font-weight: 700;
   font-size: 34px;
   color: #67b0d1;
   margin-bottom: 30px;
 }
 
-.about .cnt ul {
+.combine .cnt ul {
   list-style: none;
   padding: 10px;
   margin: 0;
 }
 
-.about .cnt ul i {
+.combine .cnt ul i {
   padding-right: 2px;
   color: #b5d9e9;
   font-size: 18px;
   line-height: 1;
 }
 
-.about .cnt ul li {
+.combine .cnt ul li {
   color: #52869d;
   padding: 10px 0;
   display: flex;
   align-items: center;
 }
 
-.about .cnt ul li:first-child {
+.combine .cnt ul li:first-child {
   padding-top: 0;
 }
 
-.about .cnt ul a {
+.combine .cnt ul a {
   color: #52869d;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
 
-.about .cnt ul a:hover {
+.combine .cnt ul a:hover {
   color: #a2cfe3;
 }
 
-.about .cnt .about-btn {
-  display: inline-block;
-  background: #67b0d1;
-  padding: 6px 44px 8px 30px;
-  color: #fff;
-  border-radius: 50px;
-  transition: 0.3s;
-  position: relative;
-}
 
-.about .cnt .about-btn i {
-  font-size: 18px;
-  position: absolute;
-  right: 18px;
-  top: 9px;
-}
 
-.about .cnt .about-btn:hover {
-  background: #7bbad7;
-}
-
-.about .icon-boxes .icon-box {
+.combine .icon-boxes .icon-box {
   margin-top: 30px;
 }
 
-.about .icon-boxes .icon-box i {
+.combine .icon-boxes .icon-box i {
   font-size: 40px;
   color: #67b0d1;
   margin-bottom: 10px;
 }
 
-.about .icon-boxes .icon-box h4 {
+.combine .icon-boxes .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
   color: #67b0d1;
 }
 
-.about .icon-boxes .icon-box a {
+.combine .icon-boxes .icon-box a {
   font-size: 15px;
   color: #52869d;
 }
 
-.about .icon-boxes .icon-box:hover a {
+.combine .icon-boxes .icon-box:hover a {
   font-size: 15px;
   color: #7bbad7;
 }
 
 @media (max-width: 1200px) {
-  .about .cnt {
+  .combine .cnt {
     padding-right: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .about {
+  .combine {
     text-align: center;
   }
   
-  .about .row h1 {
+  .combine .row h1 {
     font-weight: 700;
     font-size: 24px;
     color: #52869d;
     margin-bottom: 30px;
   }
-  .about .cnt h3 {
+  .combine .cnt h3 {
     font-weight: 700;
     font-size: 24px;
     color: #67b0d1;
@@ -709,6 +690,38 @@ i {
   }
 }
 
+
+
+/*--------------------------------------------------------------
+# Modal FAQS Section
+--------------------------------------------------------------*/
+
+.faqs-modal {
+  background: var(--bg-color);
+}
+
+
+.faqs-modal .topic h2 {
+  color: var(--softColor);
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: -1px 0 2px #2f4d5a;
+}
+
+
+.faqs-modal .card p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: -1px 0 1px #2f4d5a;
+}
+
+@media (max-width: 768px) {
+  .faqs-modal .topic h2 {
+    font-size: 15px;
+  }
+}
 
 
 

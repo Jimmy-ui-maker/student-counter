@@ -18,7 +18,7 @@ export default async function Record3() {
             {/** Header */}
             <div class="modal-header">
               <div class="topic text-center">
-                <h2>300 Level Records.</h2>
+                <h2>Level 3 Matric.</h2>
               </div>
               <button
                 type="button"

@@ -66,7 +66,7 @@ export default async function AllLevels() {
                   className=" s-view "
                   href={""}
                   data-bs-toggle="modal"
-                  data-bs-target="#record"
+                  data-bs-target="#record2"
                 >
                   <i className="bi bi-arrow-repeat "></i>
                 </Link>

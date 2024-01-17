@@ -5,7 +5,6 @@ export default function Navbar() {
   return (
     <nav
       className="navbar navbar-expand-md shadow-sm py-1"
-      data-aos="fade-down"
     >
       <div className="container">
         <img
@@ -41,12 +40,12 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="#about" className="nav-link fw-bold">
+              <a href="#combine" className="nav-link fw-bold">
                 Faqs
               </a>
             </li>
             <li className="nav-item">
-              <a href="#about" className="nav-link fw-bold">
+              <a href="#combine" className="nav-link fw-bold">
                 About
               </a>
             </li>

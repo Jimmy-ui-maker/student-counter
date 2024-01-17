@@ -8,7 +8,7 @@ export default async function Record1() {
     <>
       <div
         class="modal fade"
-        id="record"
+        id="record1"
         tabindex="-1"
         aria-labelledby="modal-title"
         aria-hidden="true"
@@ -18,7 +18,7 @@ export default async function Record1() {
             {/** Header */}
             <div class="modal-header">
               <div class="topic text-center">
-                <h2>100 Level Records.</h2>
+                <h2>Level 1 Matric.</h2>
               </div>
               <button
                 type="button"

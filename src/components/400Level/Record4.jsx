@@ -18,7 +18,7 @@ export default async function Record4() {
             {/** Header */}
             <div class="modal-header">
               <div class="topic text-center">
-                <h2>400 Level Reords.</h2>
+                <h2>Level 4 Matric.</h2>
               </div>
               <button
                 type="button"
