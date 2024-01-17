@@ -16,7 +16,8 @@ export default function Home() {
       <LandingPage />
       <Combine />
       <About />
-      
+      <Matrics />
+      <AllLevels />
       <Form1 />
       <Form2 />
       <Form3 />
