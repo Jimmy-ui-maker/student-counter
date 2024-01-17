@@ -22,7 +22,7 @@ export default async function AllLevels() {
 
   const aggregate = level1 + level2 + level3 + level4;
 
-  const localhosturl = process.env.NEXTAUTH_URL;
+  const localhosturl = process.env.API_URL;
 
   return (
     <section

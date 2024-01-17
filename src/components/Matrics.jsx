@@ -20,7 +20,7 @@ export default async function Matrics() {
   return (
     <section
       id="matric-cards"
-      className="admin-cards admin d-flex flex-column justify-content-center align-items-center"
+      className="admin-cards shadow-md admin d-flex flex-column justify-content-center align-items-center"
     >
       <div className="container">
         <div
@@ -28,7 +28,7 @@ export default async function Matrics() {
           data-aos="fade-in"
           data-aos-delay="100"
         >
-          <h2 className=" text-uppercase">Bellow the Recent Inserted Records.</h2>
+          <h2 className="">Bellow the Recent Inserted Records.</h2>
           <hr />
           <p>For each level.</p>
         </div>

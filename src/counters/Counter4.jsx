@@ -1,5 +1,5 @@
 export default async function Counter4() {
-    const ApiUrl = process.env.NEXTAUTH_URL;
+    const ApiUrl = process.env.API_URL;
     try {
       const response = await fetch(`${ApiUrl}/api/counter4`, {
         cache: "no-store",
