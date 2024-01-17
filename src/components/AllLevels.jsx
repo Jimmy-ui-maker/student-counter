@@ -1,12 +1,24 @@
+import Counter1 from "@/counters/Counter1";
+import Counter2 from "@/counters/Counter2";
+import Counter3 from "@/counters/Counter3";
+import Counter4 from "@/counters/Counter4";
 import { LevelFour, LevelOne, LevelThree, LevelTwo } from "@/models/Tables";
 import Link from "next/link";
 import React from "react";
 
 export default async function AllLevels() {
-  const level1 = await LevelOne.find({}).countDocuments();
+  {
+    /** Server fetching
+     * const level1 = await LevelOne.find({}).countDocuments();
   const level2 = await LevelTwo.find({}).countDocuments();
   const level3 = await LevelThree.find({}).countDocuments();
-  const level4 = await LevelFour.find({}).countDocuments();
+  const level4 = await LevelFour.find({}).countDocuments(); */
+  }
+
+  const level1 = await Counter1();
+  const level2 = await Counter2();
+  const level3 = await Counter3();
+  const level4 = await Counter4();
 
   const aggregate = level1 + level2 + level3 + level4;
 
