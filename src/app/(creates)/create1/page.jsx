@@ -59,7 +59,7 @@ export default function page() {
         if (res.ok) {
           const form = e.target;
           form.reset();
-          router.push("/");
+          router.push("/#admin-cards");
           router.refresh();
         } else {
           console.log("User registration failed.");
