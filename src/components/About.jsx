@@ -27,7 +27,7 @@ export default async function About() {
               {/** Accordion Body */}
               <div class="row  justify-content-around align-items-center">
                 <div class="col-lg-12">
-                  <h2 className=" text-white">Under development for now.</h2>
+                  <h2 className=" text-white">Site under development for now.</h2>
                 </div>
               </div>
             </div>
