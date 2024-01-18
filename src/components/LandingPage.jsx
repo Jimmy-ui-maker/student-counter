@@ -37,7 +37,7 @@ export default function LandingPage() {
                 <Link href="/create2" className="btn scrollto">
                   2+
                 </Link>
-                <Link href="#about" className="btn-get-started scrollto">
+                <Link href="#combine" className="btn-get-started scrollto">
                   <i className="bi bi-chevron-double-down"></i>
                 </Link>
                 <Link href="/create3" className="btn">
