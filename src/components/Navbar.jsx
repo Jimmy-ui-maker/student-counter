@@ -50,7 +50,7 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="#matric-cards" className="nav-link fw-bold">
+              <a href="#admin-cards" className="nav-link fw-bold">
                 Levels
               </a>
             </li>
