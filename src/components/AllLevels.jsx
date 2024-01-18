@@ -7,18 +7,19 @@ import Link from "next/link";
 import React from "react";
 
 export default async function AllLevels() {
+  {
+    /**
   const level1 = await LevelOne.countDocuments();
   const level2 = await LevelTwo.countDocuments();
   const level3 = await LevelThree.countDocuments();
   const level4 = await LevelFour.countDocuments();
-  {
-    /**
+  */
+}
   const level1 = await Counter1();
   const level2 = await Counter2();
   const level3 = await Counter3();
   const level4 = await Counter4();
-  */
-  }
+  
 
   const aggregate = level1 + level2 + level3 + level4;
 
