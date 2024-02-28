@@ -5,10 +5,11 @@
 
 :root {
   --bg-color: #52869d;
-  --white-color: #fff;
-  --textColor: #dfd9ff;
+  --white-color: var(--textColor);
+  --textColor: #222;
+  --lightText: #2e2d2d;
   --hoverColor: #dfd9ff;
-  --softColor: #f1fbff;
+  --softColor: #dfd9ff;
   --cardHover: #67b0d1;
   --cardTextColor: #67b0d1;
 }
@@ -23,7 +24,6 @@ body {
 --------------------------------------------------------------*/
 .navbar {
   padding: 0;
-  background-color: var(--bg-color);
 }
 
 .navbar ul {
@@ -38,7 +38,7 @@ body {
   position: relative;
 }
 .navbar a:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .navbar a,
 .navbar a:focus {
@@ -49,7 +49,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: var(--white-color);
+  color: var(--textColor);
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -58,7 +58,6 @@ body {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: var(--softColor);
   font-size: 17px;
 }
 
@@ -73,8 +72,7 @@ section {
 /*--------------------------------------------------------------
 #General Admin Section Section
 --------------------------------------------------------------*/
-#gadmin {
-  background: var(--bg-color);
+.welcome {
   background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
@@ -84,7 +82,7 @@ section {
 }
 
 /* up and down*/
-#gadmin .btn-get-started {
+.welcome .btn-get-started {
   -webkit-animation: upDown 5s infinite;
   animation: upDown 5s infinite;
 }
@@ -120,11 +118,11 @@ section {
 }
 
 hr {
-  color: #52869d;
+  color: var(--textColor);
 }
 
-#gadmin .card {
-  background-color: #52869d;
+.welcome .card {
+  background-color: inherit;
   border-top-right-radius: 70px;
   border-top-left-radius: 70px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -133,52 +131,79 @@ hr {
   cursor: pointer;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: 0.3s ease-in-out;
+  border: 1px solid var(--textColor);
 }
 
-#gadmin h3 {
+.welcome h3 {
   margin: 0 0 10px 0;
   font-size: 44px;
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #fafafa;
-  text-shadow: -1px 0 2px #2f4d5a;
+  color: var(--textColor);
+  text-shadow: -1px 0 1px #2f4d5a;
 }
-#gadmin h5 {
+.welcome h5 {
   margin: 0 0 10px 0;
   font-size: 24px;
   font-weight: 500;
   line-height: 56px;
   text-transform: uppercase;
-  color: #eff2f8;
-  text-shadow: -1px 0 2px #2f4d5a;
+  color: var(--lightText);
 }
 
-#gadmin a,
+.welcome a,
 i {
   color: var(--white-color);
 }
 
-#gadmin .row .a-route a {
+.welcome .row .btnForm {
+  border: 0;
   font-size: 20px;
   display: inline-block;
-  padding: 12px 0;
-  border-radius: 50px;
+  padding: 8px;
+  border-radius: 10px;
   transition: 0.3s ease-in-out;
-  margin: 8px;
-  width: 60px;
-  height: 60px;
+  margin-top: 15px;
+  width: 200px;
+  height: 50px;
+  color: var(--textColor);
   text-align: center;
-  border: 2px solid var(--white-color);
+  text-decoration: none;
+  border: 1px solid var(--lightText);
 }
 
-#gadmin a:hover {
-  color: #8ec4dd;
-  background: rgba(255, 255, 255, 0.15);
+.welcome .row .a-route .btn-get-started {
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 0;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid var(--lightText);
+}
+.welcome .row .a-route .btn-get-started i {
+  color: var(--textColor);
+}
+.welcome .row .a-route .btn-get-started:hover {
+  width: 55px;
+  height: 50px;
+}
+
+
+
+.welcome .card:hover {
+  transform: translateY(-5px);
+}
+.welcome .row .btnForm:hover {
+  font-size: 19px;
 }
 
 @media (max-width: 768px) {
-  #gadmin .row .a-route a {
+  .welcome .row .a-route a {
     font-size: 18px;
     display: inline-block;
     padding: 10px 0;
@@ -188,242 +213,73 @@ i {
     width: 50px;
     height: 50px;
     text-align: center;
-    border: 2px solid #fff;
+    border: 1px solid var(--textColor);
   }
 }
 
 @media (min-width: 1024px) {
-  #gadmin {
+  .welcome {
     background-attachment: fixed;
   }
 }
 
 @media (max-width: 768px) {
-  #gadmin .card {
-    background-color: #52869d;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+  .welcome .card {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
   }
 
-  #gadmin h3 {
+  .welcome h3 {
     font-size: 25px;
     line-height: 30px;
-    text-shadow: -1px 0 2px #2f4d5a;
   }
-  #gadmin h5 {
+  .welcome h5 {
     font-size: 15px;
     line-height: 30px;
-    text-shadow: -1px 0 2px #2f4d5a;
-  }
-}
-
-/*--------------------------------------------------------------
-# Combine
---------------------------------------------------------------*/
-.combine {
-  background: url("/img/about-bg.jpg") center center no-repeat;
-  background-size: cover;
-  padding: 60px 0;
-  position: relative;
-}
-
-.combine::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.75);
-  z-index: 9;
-}
-
-.combine .container {
-  position: relative;
-  z-index: 10;
-}
-
-.combine .cnt {
-  padding: 30px 30px 30px 0;
-}
-.combine .row h1 {
-  font-weight: 700;
-  font-size: 34px;
-  color: #52869d;
-  margin-bottom: 30px;
-}
-.combine .cnt h3 {
-  font-weight: 700;
-  font-size: 34px;
-  color: #67b0d1;
-  margin-bottom: 30px;
-}
-
-.combine .cnt ul {
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-}
-
-.combine .cnt ul i {
-  padding-right: 2px;
-  color: #b5d9e9;
-  font-size: 18px;
-  line-height: 1;
-}
-
-.combine .cnt ul li {
-  color: #52869d;
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.combine .cnt ul li:first-child {
-  padding-top: 0;
-}
-
-.combine .cnt ul a {
-  color: #52869d;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-.combine .cnt ul a:hover {
-  color: #a2cfe3;
-}
-
-
-
-.combine .icon-boxes .icon-box {
-  margin-top: 30px;
-}
-
-.combine .icon-boxes .icon-box i {
-  font-size: 40px;
-  color: #67b0d1;
-  margin-bottom: 10px;
-}
-
-.combine .icon-boxes .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-  color: #67b0d1;
-}
-
-.combine .icon-boxes .icon-box a {
-  font-size: 15px;
-  color: #52869d;
-}
-
-.combine .icon-boxes .icon-box:hover a {
-  font-size: 15px;
-  color: #7bbad7;
-}
-
-@media (max-width: 1200px) {
-  .combine .cnt {
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .combine {
-    text-align: center;
-  }
-  
-  .combine .row h1 {
-    font-weight: 700;
-    font-size: 24px;
-    color: #52869d;
-    margin-bottom: 30px;
-  }
-  .combine .cnt h3 {
-    font-weight: 700;
-    font-size: 24px;
-    color: #67b0d1;
-    margin-bottom: 30px;
   }
 }
 
 /*--------------------------------------------------------------
 # All Levels Records
 --------------------------------------------------------------*/
-.admin-cards {
-  background: var(--cardHover);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  overflow: hidden;
-}
-.admin-cards .icon-box {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  background: var(--white-color);
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  cursor: pointer;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  transition: all 0.3s ease-in-out;
-  border-radius: 8px;
-  z-index: 1;
-}
 
 .admin-cards .card {
+  background: var(--softColor);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--textColor);
+  border-radius: 8px;
   height: 20vh;
 }
 
-.admin-cards .icon-box::before {
-  content: "";
-  position: absolute;
-  background: var(--white-color);
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 100%;
-  transition: all 0.3s;
-  z-index: -1;
-}
 .admin-cards .title h2 {
-  color: var(--white-color);
+  color: var(--textColor);
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 35px;
-  text-shadow: -1px 0 2px #2f4d5a;
+  text-shadow: -1px 0 1px #2f4d5a;
 }
 .admin-cards .title p {
-  color: var(--white-color);
+  color: var(--textColor);
   font-weight: 500;
   margin-bottom: 15px;
   font-size: 25px;
-  text-shadow: -1px 0 2px #2f4d5a;
 }
 
-
 .admin-cards h3 {
-  color: var(--cardTextColor);
+  color: var(--textColor);
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 25px;
 }
 .admin-cards h4 {
-  color: var(--cardTextColor);
+  color: var(--textColor);
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.admin-cards .icon-box:hover::before {
-  background: var(--cardHover);
-  top: 0;
-  border-radius: 0px;
+.admin-cards .card:hover {
+  opacity: 0.6;
 }
 
 .admin-cards .icon {
@@ -437,50 +293,22 @@ i {
   transition: all 0.3s ease-in-out;
 }
 
-.admin-cards .card .s-view {
-  font-size: 10px;
-  width: 30px;
-  height: 20px;
-  text-align: center;
-  border-radius: 8px;
-  border: 1px solid var(--cardTextColor);
-  margin-top: -110px;
-}
-
-.admin-cards .card .s-view i{
-  font-size: 18px;
-  line-height: 1;
-  color: var(--cardTextColor);
-  transition: all 0.3s ease-in-out;
-}
-
-.admin-cards .icon-box:hover h3 {
-  color: var(--white-color);
-}
-.admin-cards .icon-box:hover h4 {
-  color: var(--white-color);
-}
-
-.admin-cards .card:hover i {
-  color: var(--white-color);
-}
-
 @media (max-width: 768px) {
   .admin-cards .title h2 {
     color: var(--white-color);
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 28px;
-    text-shadow: -1px 0 2px #2f4d5a;
+    text-shadow: -1px 0 1px #2f4d5a;
   }
   .admin-cards h3 {
-    color: #67b0d1;
+    color: var(--textColor);
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 28px;
   }
   .admin-cards h4 {
-    color: #67b0d1;
+    color: var(--textColor);
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px;
@@ -491,19 +319,9 @@ i {
 # Total Record Card
 --------------------------------------------------------------*/
 .admin-cards .total {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  background: var(--white-color);
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  cursor: pointer;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: all 0.3s ease-in-out;
-  border-top-right-radius: 70px;
-  border-bottom-left-radius: 70px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
   z-index: 1;
 }
 
@@ -511,43 +329,25 @@ i {
   height: 20vh;
 }
 
-.admin-cards .total::before {
-  content: "";
-  position: absolute;
-  background: var(--white-color);
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 100%;
-  transition: all 0.3s;
-  z-index: -1;
-}
-
 .admin-cards .total h1 {
-  color: var(--cardTextColor);
+  color: var(--textColor);
   font-weight: 700;
   font-size: 48px;
-}
-
-.admin-cards .total:hover::before {
-  background: var(--cardHover);
-  top: 0;
-  border-radius: 0px;
 }
 
 .admin-cards .icon {
   margin-bottom: 15px;
 }
 
-.admin-cards .total:hover h1 {
-  color: var(--white-color);
+.admin-cards .total:hover {
+  transform: translateY(-5px);
 }
 
 @media (max-width: 768px) {
   .admin-cards .total h1 {
-    color: var(--cardTextColor);
+    color: var(--textColor);
     font-weight: 700;
-    margin-bottom: 15px;
+    padding-top: 40px;
     font-size: 28px;
   }
 }
@@ -555,10 +355,8 @@ i {
 /*--------------------------------------------------------------
 # Form3 Section
 --------------------------------------------------------------*/
-#allForms {
-  background: var(--bg-color);
-}
-#allForms .card {
+
+.allForms .card {
   background: transparent;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
@@ -567,77 +365,80 @@ i {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: all 0.3s ease-in-out;
-  border-top-right-radius: 70px;
-  border-bottom-left-radius: 70px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border: 1px solid var(--textColor);
   z-index: 1;
 }
 
-#allForms .topic h2 {
-  color: var(--softColor);
+.allForms .topic h2 {
+  color: var(--textColor);
   font-size: 36px;
   text-transform: uppercase;
   font-weight: 600;
   text-shadow: -1px 0 2px #2f4d5a;
 }
-#allForms .card h1 {
+.allForms .card h1 {
   margin: 0 0 10px 0;
   font-size: 34px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--white-color);
-  text-shadow: -1px 0 1px #2f4d5a;
+  color: var(--lightText);
 }
 
-#allForms .card p {
-  margin: 0 0 10px 0;
-  font-size: 14px;
-  font-weight: 700;
-  background-color: var(--cardHover);
-  text-transform: uppercase;
-  border-radius: 10px;
-  color: rgba(255, 0, 0, 0.541);
-}
-#allForms .card label {
+
+.allForms .card label {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
-  text-shadow: -1px 0 1px #2f4d5a;
+  color: var(--textColor);
 }
-#allForms .card input {
-  font-size: 18px;
+.allForms .card input {
+  font-size: 12px;
   font-weight: 700;
-  color: #000;
+  padding: 10px;
+  color: var(--lightText);
+  border: 1px solid var(--lightText);
+}
+.allForms .card select,
+option {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--lightText);
+  border: 1px solid var(--lightText);
+}
+.allForms .card textarea {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--lightText);
+  border: 1px solid var(--lightText);
 }
 
-
-#allForms .btn-submit {
-  width: 120px;
+.allForms .btn-submit {
+  width: 140px;
   height: 40px;
-  background-color: var(--cardHover);
+  background-color: var(--softColor);
   border-radius: 5px;
   font-size: 18px;
-  color: var(--white-color);
+  border: 1px solid var(--textColor);
+  transition: all 0.3s ease-in-out;
+  color: var(--textColor);
 }
-#allForms .btn-submit:hover {
-  background-color: var(--softColor);
-  color: var(--cardHover);
+.allForms .btn-submit:hover {
+  font-size: 17px;
 }
 
 @media (max-width: 768px) {
-  #allForms .btn-submit {
+  .allForms .btn-submit {
     width: 120px;
     height: 40px;
-    background-color: var(--cardHover);
     border-radius: 5px;
     font-size: 15px;
-    color: var(--white-color);
+    color: var(--textColor);
   }
-  #allForms .card h1 {
+  .allForms .card h1 {
     font-size: 24px;
-    
   }
 }
-
 
 /*--------------------------------------------------------------
 # Modal Form Section
@@ -680,7 +481,7 @@ i {
 .c-modal .card p {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: var(--textColor);
   text-shadow: -1px 0 1px #2f4d5a;
 }
 
@@ -689,41 +490,6 @@ i {
     font-size: 15px;
   }
 }
-
-
-
-/*--------------------------------------------------------------
-# Modal FAQS Section
---------------------------------------------------------------*/
-
-.faqs-modal {
-  background: var(--bg-color);
-}
-
-
-.faqs-modal .topic h2 {
-  color: var(--softColor);
-  font-size: 26px;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-shadow: -1px 0 2px #2f4d5a;
-}
-
-
-.faqs-modal .card p {
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: -1px 0 1px #2f4d5a;
-}
-
-@media (max-width: 768px) {
-  .faqs-modal .topic h2 {
-    font-size: 15px;
-  }
-}
-
-
 
 /*--------------------------------------------------------------
 # contact Section
@@ -738,7 +504,7 @@ i {
 .contact .heading {
   font-size: 48px;
   font-weight: 700;
-  color: #fff;
+  color: var(--textColor);
   text-shadow: -1px 0 1px #2f4d5a;
 }
 
@@ -766,7 +532,7 @@ i {
 .contact .card .card-subtitle {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: var(--textColor);
   text-shadow: -1px 0 1px #2f4d5a;
 }
 .contact .card .card-body p {
@@ -776,7 +542,7 @@ i {
 .contact .card label {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: var(--textColor);
   text-shadow: -1px 0 1px #2f4d5a;
 }
 .contact .card input {
@@ -786,7 +552,6 @@ i {
 }
 
 @media (max-width: 768px) {
- 
   .contact .card .card-img {
     border-top-right-radius: 60px;
     border-bottom-left-radius: 4px;
@@ -817,9 +582,8 @@ i {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #67b0d1;
   padding: 0 0 30px 0;
-  color: #fff;
+  color: var(--textColor);
   font-size: 14px;
 }
 
@@ -832,23 +596,23 @@ i {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-  color: #fff;
+  margin-top: 10px;
+  color: var(--textColor);
 }
 #footer .credits a {
-  color: #fff;
+  color: var(--textColor);
+ 
 }
 #footer .credits a:hover {
-  color: #67b0d1;
-}
-#footer:hover {
-  background: #52869d;
+  font-size: 12px;
 }
 
-#footer .scroll-back{
-  background: var(--softColor);
+#footer .scroll-back {
   border-radius: 50px;
+  margin: 10px;
+  border: 1px solid var(--lightText);
 }
-#footer .scroll-back i{
+#footer .scroll-back i {
   font-size: 25px;
 }
 @media (max-width: 575px) {

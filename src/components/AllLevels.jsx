@@ -1,25 +1,21 @@
-import Counter1 from "@/counters/Counter1";
-import Counter2 from "@/counters/Counter2";
-import Counter3 from "@/counters/Counter3";
-import Counter4 from "@/counters/Counter4";
-import { LevelFour, LevelOne, LevelThree, LevelTwo } from "@/models/Tables";
+import { AllLevelTable } from "@/models/Tables";
 import Link from "next/link";
 import React from "react";
 
 export default async function AllLevels() {
+  const level1 = await AllLevelTable.find({ level: "100L" }).countDocuments();
+  const level2 = await AllLevelTable.find({ level: "200L" }).countDocuments();
+  const level3 = await AllLevelTable.find({ level: "300L" }).countDocuments();
+  const level4 = await AllLevelTable.find({ level: "400L" }).countDocuments();
+
   {
     /**
-  const level1 = await LevelOne.countDocuments();
-  const level2 = await LevelTwo.countDocuments();
-  const level3 = await LevelThree.countDocuments();
-  const level4 = await LevelFour.countDocuments();
-  */
-}
   const level1 = await Counter1();
   const level2 = await Counter2();
   const level3 = await Counter3();
   const level4 = await Counter4();
-  
+    */
+  }
 
   const aggregate = level1 + level2 + level3 + level4;
 
@@ -28,7 +24,7 @@ export default async function AllLevels() {
   return (
     <section
       id="admin-cards"
-      className="admin-cards admin d-flex flex-column justify-content-center align-items-center"
+      className="admin-cards admin shadow-lg d-flex flex-column justify-content-center align-items-center"
     >
       <div className="container">
         <div
@@ -43,93 +39,61 @@ export default async function AllLevels() {
         <div className="  row d-flex justify-content-center align-items-center text-center">
           <div className="row g-lg-4 g-3">
             <div className="col-12 col-lg-3 text-lg-start text-center ">
-              <div className="card p-3 icon-box" data-aos="fade-up">
+              <div className="card p-3 shadow" data-aos="fade-up">
                 <Link
                   className=" text-decoration-none"
-                  href={`${localhosturl}/api/level1`}
+                  href={`${localhosturl}/api/allLevels`}
                 >
                   <h3 className=" p-2">100 Level</h3>
                   <h4 className=" px-2">Total = {level1}</h4>
-                </Link>
-                <Link
-                  className=" s-view "
-                  href={""}
-                  data-bs-toggle="modal"
-                  data-bs-target="#record1"
-                >
-                  <i className="bi bi-arrow-repeat "></i>
                 </Link>
               </div>
             </div>
 
             <div className="col-12 col-lg-3 text-lg-start text-center ">
               <div
-                className="card p-3 icon-box"
+                className="card p-3 shadow"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
                 <Link
                   className=" text-decoration-none"
-                  href={`${localhosturl}/api/level2`}
+                  href={`${localhosturl}/api/allLevels`}
                 >
                   <h3 className=" p-2">200 Level</h3>
                   <h4 className=" px-2">Total = {level2}</h4>
-                </Link>
-                <Link
-                  className=" s-view "
-                  href={""}
-                  data-bs-toggle="modal"
-                  data-bs-target="#record2"
-                >
-                  <i className="bi bi-arrow-repeat "></i>
                 </Link>
               </div>
             </div>
 
             <div className="col-12 col-lg-3 text-lg-start text-center ">
               <div
-                className="card p-3 icon-box"
+                className="card p-3 shadow"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 <Link
                   className=" text-decoration-none"
-                  href={`${localhosturl}/api/level3`}
+                  href={`${localhosturl}/api/allLevels`}
                 >
                   <h3 className=" p-2">300 Level</h3>
                   <h4 className=" px-2">Total = {level3}</h4>
-                </Link>
-                <Link
-                  className=" s-view "
-                  href={""}
-                  data-bs-toggle="modal"
-                  data-bs-target="#record3"
-                >
-                  <i className="bi bi-arrow-repeat "></i>
                 </Link>
               </div>
             </div>
 
             <div className="col-12 col-lg-3 text-lg-start text-center ">
               <div
-                className="card p-3 icon-box"
+                className="card p-3 shadow"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
                 <Link
                   className=" text-decoration-none"
-                  href={`${localhosturl}/api/level4`}
+                  href={`${localhosturl}/api/allLevels`}
                 >
                   <h3 className=" p-2">400 Level</h3>
                   <h4 className=" px-2">Total = {level4}</h4>
-                </Link>
-                <Link
-                  className=" s-view "
-                  href={""}
-                  data-bs-toggle="modal"
-                  data-bs-target="#record4"
-                >
-                  <i className="bi bi-arrow-repeat "></i>
                 </Link>
               </div>
             </div>
@@ -137,7 +101,7 @@ export default async function AllLevels() {
           <div className="row  d-flex justify-content-center ">
             <div className=" col-lg-12 col-12 ">
               <div
-                className="card mt-4 total "
+                className="card mt-4 total shadow "
                 data-aos="zoom-in"
                 data-aos-delay="400"
               >
@@ -147,7 +111,7 @@ export default async function AllLevels() {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </section>
   );
