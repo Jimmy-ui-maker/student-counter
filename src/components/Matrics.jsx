@@ -1,19 +1,19 @@
-import { LevelFour, LevelOne, LevelThree, LevelTwo } from "@/models/Tables";
+import { AllLevelTable } from "@/models/AllTables";
 
 export default async function Matrics() {
-  const level1 = await LevelOne.find({}, null, {
+  const level1 = await AllLevelTable.find({}, null, {
     sort: { _id: -1 },
     limit:1,
   });
-  const level2 = await LevelTwo.find({}, null, {
+  const level2 = await AllLevelTable.find({}, null, {
     sort: { _id: -1 },
     limit:1,
   });
-  const level3 = await LevelThree.find({}, null, {
+  const level3 = await AllLevelTable.find({}, null, {
     sort: { _id: -1 },
     limit:1,
   });
-  const level4 = await LevelFour.find({}, null, {
+  const level4 = await AllLevelTable.find({}, null, {
     sort: { _id: -1 },
     limit:1,
   });

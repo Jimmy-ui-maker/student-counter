@@ -1,4 +1,5 @@
-import { AllLevelTable } from "@/models/Tables";
+
+import { AllLevelTable } from "@/models/AllTables";
 import Link from "next/link";
 import React from "react";
 
