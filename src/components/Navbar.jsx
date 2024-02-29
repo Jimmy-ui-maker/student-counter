@@ -41,7 +41,7 @@ export default function Navbar() {
             </li>
             
             <li className="nav-item">
-              <a href="#admin-cards" className="nav-link fw-bold">
+              <a href="/#admin-cards" className="nav-link fw-bold">
                 Levels
               </a>
             </li>
