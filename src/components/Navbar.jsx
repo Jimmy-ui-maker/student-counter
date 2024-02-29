@@ -39,26 +39,13 @@ export default function Navbar() {
                 Home
               </a>
             </li>
+            
             <li className="nav-item">
-              <a href="#combine" className="nav-link fw-bold">
-                Faqs
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#combine" className="nav-link fw-bold">
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#matric-cards" className="nav-link fw-bold">
+              <a href="#admin-cards" className="nav-link fw-bold">
                 Levels
               </a>
             </li>
-            <li className="nav-item">
-              <a href="#contact" className="nav-link fw-bold">
-                Contact
-              </a>
-            </li>
+            
           </ul>
         </div>
       </div>
