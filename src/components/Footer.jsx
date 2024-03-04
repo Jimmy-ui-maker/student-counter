@@ -12,7 +12,7 @@ export default function Footer() {
           </strong>
           . All Rights Reserved
         </div>
-        <div class="credits">
+        <div class="credits ">
           <Link className=" text-decoration-none" href={""}>
             Designed
           </Link>{" "}

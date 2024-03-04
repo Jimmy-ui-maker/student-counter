@@ -1,5 +1,5 @@
 
-import { AllLevelTable } from "@/models/Tables";
+import { AllLevelTable } from "@/models/AllTables";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {

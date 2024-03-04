@@ -5,9 +5,8 @@ export default function Home() {
   return (
     <>
       <LandingPage />
-
       <FAQs />
-      <AllLevels />
+      <AllLevels/>
     </>
   );
 }

@@ -17,6 +17,10 @@ const AllLevelSchema = new Schema({
     required: true,
     enum: ["100L", "200L", "300L", "400L"],
   },
+  section: {
+    type: String,
+    required: true,
+  },
   phone: {
     type: String,
     required: true,

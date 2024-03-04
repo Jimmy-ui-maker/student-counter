@@ -26,7 +26,7 @@ export default function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon icons"></span>
+          <i className="bi bi-list"></i>
         </button>
 
         <div

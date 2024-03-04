@@ -8,6 +8,7 @@ export default function page() {
   const [fullnames, setFullNames] = useState("");
   const [matric, setMatric] = useState("");
   const [level, setLevel] = useState("100L");
+  const [section, setSection] = useState("");
   const [phone, setPhone] = useState("");
   const [desc, setDesc] = useState("");
   const [error, setError] = useState("");
@@ -19,13 +20,11 @@ export default function page() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setSubmit(true)
-
-    if (!fullnames || !matric || !level || !phone || !desc) {
+    if (!fullnames || !matric || !section || !level || !phone || !desc) {
       setError("All fields are necessary.");
       return;
     }
-
+    setSubmit(true);
     if (matric.includes("KASU/") && matric.includes("CSC/")) {
       try {
         const resUserExists = await fetch("api/allExists", {
@@ -52,6 +51,7 @@ export default function page() {
             fullnames,
             matric,
             level,
+            section,
             phone,
             desc,
           }),
@@ -87,7 +87,7 @@ export default function page() {
                   onSubmit={handleSubmit}
                   className=" align-items-center p-2  rounded"
                 >
-                  <h1 className=" text-center">100 Level Entry Page</h1>
+                  <h1 className=" text-center">All Level Entry Page</h1>
 
                   <hr />
                   <div className="flex mb-4">
@@ -121,6 +121,15 @@ export default function page() {
                       </select>
                     </div>
                     <div className="col-md-12">
+                      <label className="">Section </label>{" "}
+                      <small>e.g 2020/2021</small>
+                      <input
+                        className="rounded-2 form-control shadow-none"
+                        type="text"
+                        onChange={(e) => setSection(e.target.value)}
+                      />
+                    </div>
+                    <div className="col-md-12">
                       <label className="">Phone</label>
                       <input
                         className="rounded-2 form-control shadow-none"
@@ -138,7 +147,9 @@ export default function page() {
                       ></textarea>
                     </div>
                   </div>
-                  {error && <p className=" text-center fw-bold">{error}</p>}
+                  {error && (
+                    <p className=" text-center text-danger fw-bold">{error}</p>
+                  )}
                   <div className=" d-flex justify-content-center">
                     <button
                       className="btn btn-submit fw-semibold"

@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 export default async function AllLevels() {
+  
   const level1 = await AllLevelTable.find({ level: "100L" }).countDocuments();
   const level2 = await AllLevelTable.find({ level: "200L" }).countDocuments();
   const level3 = await AllLevelTable.find({ level: "300L" }).countDocuments();
